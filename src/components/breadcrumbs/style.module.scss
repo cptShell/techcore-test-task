@@ -1,0 +1,13 @@
+.bread-crumb-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--blue-dark);
+  & > img {
+  }
+}
+
+:global(.ant-breadcrumb li) {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+#root {
+  font-family: Poppins, sans-serif;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr;
+}
+
+.ant-menu-submenu-arrow {
+  display: none !important;
+}
+
+.ant-menu-item-selected::after {
+  content: none !important;
+}
+
+.ant-menu-sub.ant-menu-inline {
+  background: none !important;
+}
+
+.ant-menu {
+  color: var(--grey) !important;
+}

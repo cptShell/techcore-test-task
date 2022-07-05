@@ -1,0 +1,35 @@
+.settings-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 1fr;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  background: var(--background-blue);
+  border-right: 1px solid rgba(46, 91, 255, 0.1);
+  border-left: 1px solid rgba(46, 91, 255, 0.1);
+}
+
+.heading {
+  padding-left: 24px;
+}
+
+.main-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sub-list__item {
+}
