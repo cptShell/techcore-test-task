@@ -20,15 +20,21 @@
   gap: 8px;
   width: 72px;
   height: 40px;
+  color: var(--grey-2);
+  transition: color ease 200ms;
+  &:hover {
+    color: var(--blue-100);
+  }
 }
 
 .navigation-item__icon {
-  width: 20px;
-  height: 20px;
+  min-height: 20px;
 }
 
 .navigation-item__description {
   text-align: center;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .notification {

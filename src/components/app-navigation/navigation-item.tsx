@@ -7,11 +7,11 @@ type Props = {
 };
 
 export const NavigationItem: FC<Props> = ({ item }) => {
-  const { src, description } = item;
+  const { Icon, description, isActive } = item;
 
   return (
-    <div className={styles['navigation-item']}>
-      <img className={styles['navigation-item__icon']} src={src} alt={description} />
+    <div className={styles['navigation-item']} style={{ color: isActive ? 'var(--blue-100)' : undefined }}>
+      <Icon className={styles['navigation-item__icon']} />
       <span className={styles['navigation-item__description']}>{description}</span>
     </div>
   );

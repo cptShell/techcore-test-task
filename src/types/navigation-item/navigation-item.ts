@@ -1,4 +1,5 @@
 export type NavigationItemData = {
-  src: string;
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   description: string;
+  isActive?: true;
 };

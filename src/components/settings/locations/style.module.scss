@@ -1,0 +1,274 @@
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locations-title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  & > h2 {
+    margin-bottom: 0;
+  }
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: auto;
+}
+
+.card-title {
+  margin-bottom: 0;
+  &:hover {
+    cursor: pointer;
+    color: var(--blue-100);
+  }
+}
+
+.default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  background: var(--blue-100);
+  border-radius: 50em;
+  color: white;
+}
+
+.locations-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 304px);
+  grid-template-rows: repeat(1fr);
+  gap: 16px;
+}
+
+.location-card {
+  position: relative;
+  aspect-ratio: 19 / 11;
+  border-radius: 12px;
+  filter: var((--shadow-small));
+  transition: filter ease 200ms;
+  &:hover {
+    filter: var((--shadow-main));
+  }
+}
+
+.card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-title {
+  font-size: 15px;
+  line-height: 21px;
+}
+
+.card-option {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.card-options {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  width: 100%;
+  gap: 4px 0;
+
+  .option-description {
+    color: var(--blue-100);
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.user-list {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.user-item {
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: white;
+  backdrop-filter: contrast(0.85);
+}
+
+.user-postfix {
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: var(--blue-100);
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dropdown-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  &:hover {
+    background: var(--blue-10);
+  }
+}
+
+.form {
+  border-radius: 12px;
+}
+
+.form-item-title {
+  & > span {
+    color: red;
+  }
+}
+
+.week-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.week-grid {
+  display: grid;
+  gap: 12px 30px;
+  grid-template-columns: repeat(3, 85px);
+}
+
+.week-item {
+  margin-left: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.select-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.number-input {
+  margin-right: auto;
+}
+
+.users-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.warning-container {
+  display: flex;
+  gap: 8px;
+  & > span {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--grey-2);
+  }
+}
+
+.accept-message {
+  padding: 8px 12px;
+  border: 1px solid var(--blue-100);
+  border-radius: 6px;
+  background-color: #eef7fc;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  & > span {
+    color: var(--blue-100);
+    text-decoration: underline;
+  }
+}
+
+.submit-panel,
+.delete-panel {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.delete-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.delete-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.delete-description {
+  display: flex;
+  gap: 8px;
+}
+
+:global(.ant-modal-footer) {
+  padding: 0;
+  border: 0;
+}
+
+:global(.ant-form-item) {
+  margin-bottom: 0 !important;
+}

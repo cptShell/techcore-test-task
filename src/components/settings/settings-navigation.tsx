@@ -1,31 +1,8 @@
 import { FC, useState } from 'react';
-import styles from './style.module.scss';
+import { Menu, MenuProps } from 'antd';
 import { ReactComponent as SettingsIcon } from '../../assets/icons/settings-2.svg';
 import { ReactComponent as VacationIcon } from '../../assets/icons/vacation-manager.svg';
-import { Menu, MenuProps } from 'antd';
-
-type MenuItem = Required<MenuProps>['items'][number];
-
-const getItem = (
-  label: React.ReactNode,
-  key?: React.Key | null,
-  icon?: React.ReactNode,
-  children?: MenuItem[],
-  type?: 'group'
-): MenuItem => {
-  return {
-    key,
-    icon,
-    children,
-    label,
-    type,
-  } as MenuItem;
-};
-
-const items: Array<MenuItem> = [
-  getItem('Option 5', '5', <SettingsIcon />),
-  getItem('Option 6', '6', <VacationIcon />, [getItem('Option 7', '7'), getItem('Option 8', '8')]),
-];
+import styles from './style.module.scss';
 
 export const SettingsNavigation: FC = () => {
   const [current, setCurrent] = useState('8');
@@ -39,10 +16,25 @@ export const SettingsNavigation: FC = () => {
       <h2 className={styles['heading']}>Settings</h2>
       <Menu
         onClick={onClick}
-        items={items}
+        items={[
+          {
+            label: <span style={{ fontSize: '14px', fontWeight: '500' }}>General</span>,
+            key: '1',
+            icon: <SettingsIcon width={14} />,
+          },
+          {
+            label: <span style={{ fontSize: '14px', fontWeight: '500' }}>Vacation Manager</span>,
+            key: '2',
+            icon: <VacationIcon width={14} />,
+            children: [
+              { label: <span style={{ fontSize: '13px', fontWeight: '400' }}>Leave Types</span>, key: '3' },
+              { label: <span style={{ fontSize: '13px', fontWeight: '400' }}>Locations</span>, key: '4' },
+            ],
+          },
+        ]}
         style={{ background: 'none', border: 'none', color: 'var(--grey-2)' }}
         mode="inline"
-        defaultOpenKeys={['6']}
+        defaultOpenKeys={['4']}
         selectedKeys={[current]}
       />
     </div>

@@ -1,14 +1,14 @@
 import { SettingsNavigation } from './settings-navigation';
-import styles from './style.module.scss';
-import { Locations } from './locations';
+import { Locations } from './locations/locations';
 import { Breadcrumbs } from '../breadcrumbs/breadcrumbs';
-import { mockPath } from '../../mock/mock-path';
+import { mockPath } from '../../mock/mock';
+import styles from './style.module.scss';
 
 export const Settings = () => {
   return (
-    <div className={styles['settings-container']}>
+    <div className={styles['settings']}>
       <SettingsNavigation />
-      <div>
+      <div className={styles['content-container']}>
         <Breadcrumbs items={mockPath} />
         <Locations />
       </div>
