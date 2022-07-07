@@ -58,7 +58,13 @@ export const CardDropdown: FC<Props> = ({ handleSetDefault, handleDelete, locati
         </Button>
       </Dropdown>
       <Modal width={420} footer={[]} title="Delete Location" visible={isOpen} onOk={handleClose} onCancel={handleClose}>
-        <DeleteLocation handleDelete={handleDelete} locationName={locationName} />
+        <DeleteLocation
+          handleDelete={() => {
+            handleDelete();
+            handleClose();
+          }}
+          locationName={locationName}
+        />
       </Modal>
     </div>
   );

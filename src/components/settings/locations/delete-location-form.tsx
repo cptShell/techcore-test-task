@@ -22,7 +22,7 @@ export const DeleteLocation: FC<Props> = ({ handleDelete, locationName }) => {
         </div>
       </div>
       <div className={styles['delete-panel']}>
-        <Button type="primary" danger>
+        <Button type="primary" danger onClick={handleDelete}>
           Yes, Delete
         </Button>
       </div>
